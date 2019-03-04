@@ -16,6 +16,6 @@ function createWorkerStream(fileName, workerData) {
     });
 }
 
-createWorkerStream('./worker.js',{start: 0, end: 100})
-    .series()
-    .each(console.log);
+module.exports = {
+    createWorkerStream
+};
